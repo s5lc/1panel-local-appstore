@@ -1,0 +1,171 @@
+additionalProperties:
+  formFields:
+    - default: 5244
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: WebUI Port
+        es-es: Puerto web
+        fa: 'پورت WebUI'
+        ja: WebUI ポート
+        ms: Port WebUI
+        pt-br: Porta WebUI
+        ru: Порт WebUI
+        ko: WebUI 포트
+        zh-Hant: WebUI 埠
+        zh: WebUI 端口
+        tr: WebUI portu
+    - default: 5246
+      edit: true
+      envKey: PANEL_APP_PORT_S3
+      labelEn: S3 Port
+      labelZh: S3 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: S3 Port
+        es-es: Puerto S3
+        fa: 'پورت S3'
+        ja: S3 ポート
+        ms: Port S3
+        pt-br: Porta S3
+        ru: Порт S3
+        ko: S3 포트
+        zh-Hant: S3 埠
+        zh: S3 端口
+        tr: S3 Bağlantı Noktası
+    - default: none
+      edit: true
+      envKey: OPENLIST_PORT_MODE
+      labelEn: Additional port mappings
+      labelZh: 额外端口映射
+      required: true
+      type: select
+      label:
+        en: Additional port mappings
+        es-es: Mapeos de puertos adicionales
+        fa: نگاشت پورت‌های اضافی
+        ja: 追加のポートマッピング
+        ms: Pemetaan port tambahan
+        pt-br: Mapeamentos de portas adicionais
+        ru: Дополнительный проброс портов
+        ko: 추가 포트 매핑
+        zh-Hant: 額外連接埠映射
+        zh: 额外端口映射
+        tr: Ek port eşlemeleri
+      values:
+        - label: 关闭
+          value: none
+        - label: FTP
+          value: ftp
+        - label: SFTP
+          value: sftp
+        - label: FTP + SFTP
+          value: ftp-sftp
+    - default: 5221
+      edit: true
+      envKey: OPENLIST_FTP_PORT
+      labelEn: FTP port
+      labelZh: FTP 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: FTP port
+        es-es: Puerto FTP
+        fa: پورت FTP
+        ja: FTP ポート
+        ms: Port FTP
+        pt-br: Porta FTP
+        ru: Порт FTP
+        ko: FTP 포트
+        zh-Hant: FTP 埠
+        zh: FTP 端口
+        tr: FTP portu
+    - default: 5222
+      edit: true
+      envKey: OPENLIST_SFTP_PORT
+      labelEn: SFTP port
+      labelZh: SFTP 端口
+      required: true
+      rule: paramPort
+      type: number
+      label:
+        en: SFTP port
+        es-es: Puerto SFTP
+        fa: پورت SFTP
+        ja: SFTP ポート
+        ms: Port SFTP
+        pt-br: Porta SFTP
+        ru: Порт SFTP
+        ko: SFTP 포트
+        zh-Hant: SFTP 埠
+        zh: SFTP 端口
+        tr: SFTP portu
+    - default: '50000-50009'
+      edit: true
+      envKey: OPENLIST_FTP_PASSIVE_PORTS
+      labelEn: FTP passive port range
+      labelZh: FTP 被动端口范围
+      required: true
+      type: text
+      label:
+        en: FTP passive port range
+        es-es: Rango de puertos FTP pasivos
+        fa: محدوده پورت‌های حالت غیرفعال FTP
+        ja: FTP パッシブポート範囲
+        ms: Julat port pasif FTP
+        pt-br: Intervalo de portas passivas FTP
+        ru: Диапазон пассивных портов FTP
+        ko: FTP 패시브 포트 범위
+        zh-Hant: FTP 被動連接埠範圍
+        zh: FTP 被动端口范围
+        tr: FTP pasif port aralığı
+    - default: ""
+      envKey: PRE_INSTALLED
+      required: false
+      type: select
+      label:
+        en: Preinstalled Environment
+        es-es: Entorno preinstalado
+        fa: 'محیط از پیش نصب شده'
+        ja: プリインストール環境
+        ms: Persekitaran Terpasang Awal
+        pt-br: Ambiente Pré-instalado
+        ru: Предустановленная среда
+        ko: 사전 설치된 환경
+        zh-hant: 預裝環境
+        zh: 预装环境
+        tr: Onceden yuklenmis ortam
+      values:
+        - label: 缩略图 (预装：ffmpeg)
+          value: "ffmpeg"
+        - label: 离线下载 (预装：aria2)
+          value: "aria2"
+        - label: 以上所有 (预装：ffmpeg & aria2)
+          value: "aio"
+    - default: Asia/Shanghai
+      edit: true
+      envKey: TIME_ZONE
+      labelEn: Time zone
+      labelZh: 时区
+      label:
+        en: Time zone
+        es-es: Zona horaria
+        fa: 'منطقه زمانی'
+        ja: タイムゾーン
+        ms: Zon masa
+        pt-br: Fuso horário
+        ru: Часовой пояс
+        ko: 시간대
+        zh: 时区
+        zh-Hant: 時區
+        tr: Saat Dilimi
+      required: true
+      type: text
